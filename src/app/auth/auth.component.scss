@@ -1,0 +1,200 @@
+header .navbar-default {
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgb(156 156 156 / 36%);
+  }
+  .navbar-brand {
+    color: #222;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: -1px;
+    margin-top: 18px;
+    padding: 0 0 0 15px;
+  }
+  header .navbar-collapse ul.navbar-nav {
+    float: right;
+    margin-right: 0;
+  }
+  header ul.nav li {
+    margin: 0;
+  }
+  header .navbar-nav > li {
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: rgb(1, 188, 212);
+    background: none;
+    border-radius: 0;
+  }
+  .navbar .nav > li > a {
+    color: #1d1d1d;
+    text-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0) !important;
+    font-size: 0.97rem;
+    font-weight: 400;
+  }
+  .header-login {
+    border: 2px solid #ededed;
+    border-radius: 34px;
+    padding: 10px 30px;
+  }
+  .navbar .nav > li > a:hover {
+    text-decoration: none;
+  }
+  .login-btn {
+    border: 2px solid #ebeef3;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
+  }
+  .border-before {
+    position: relative;
+  }
+  .border-before::after {
+    border: 1px solid #ebeef3;
+    content: "";
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    right: 0;
+  }
+  .border-before::before {
+    border: 1px solid #ebeef3;
+    content: "";
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 0;
+  }
+  .content-image {
+    background: url("../../assets/images/loginImg.svg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .styled-checkbox {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    z-index: 9999999;
+    width: 40px;
+    height: 40px;
+  }
+  .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+  .styled-checkbox:checked + label:before {
+    background: var(--main-color);
+    box-shadow: 1px 4px 5px 0px rgb(169 163 163 / 74%);
+  }
+  .styled-checkbox + label:before {
+    content: "";
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: white;
+    border: 1px solid #ee9c6a;
+  
+    border-radius: 5px;
+  }
+  .styled-checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 0.32rem;
+    top: 0.55rem;
+    background: white;
+    width: 0.1rem;
+    height: 0.1rem;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+  .styled-checkbox:hover + label:before {
+    background: var(--main-color);
+  }
+  .form-icon {
+    position: absolute;
+    top: 25%;
+    height: 1.6rem;
+    width: 1.6rem;
+    left: 3%;
+  }
+  .form-icon-staus {
+    position: absolute;
+    top: 25%;
+    height: 1.6rem;
+    width: 1.6rem;
+    right: 3%;
+  }
+  .login-title h4 {
+    font-size: 1.55rem;
+  }
+  .login-title h6 {
+    color: #727272;
+  }
+  .error-msg {
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0.8rem;
+  }
+  .h-blank {
+    height: 5rem;
+  }
+  .checkRemember input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  .checkRemember label {
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.57rem;
+    color: #262627;
+    letter-spacing: 0;
+  }
+  .checkRemember label:before {
+    content: "";
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #e0e0e1;
+    padding: 0.3rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 5px;
+    border-radius: 0.2rem;
+  }
+  .checkRemember input:checked + label::before {
+    content: "";
+    background-color: #ee9c6a;
+    border: 2px solid #ee9c6a;
+    box-shadow: 0px 6px 3px -2px #ebac66;
+  }
+  .checkRemember input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.6rem;
+    width: 0.36rem;
+    height: 0.7rem;
+    border: solid #fff;
+    border-width: 0 0.19rem 0.19rem 0;
+    transform: rotate(45deg);
+  }
+  

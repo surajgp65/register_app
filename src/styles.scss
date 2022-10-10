@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+// regular style toast
+@import '~ngx-toastr/toastr';
+:root {
+    --main-color: #ee9c6a;
+    --color-dark: #1d232b;
+    --text-gray: #8390a2;
+    --color-secondary: #272727;
+    --bg-main: #f9f9f9;
+    --bg-orange: #fefaf7;
+    --bg-faint-orange: #fff7f2;
+    --color-title: #c7beb4;
+    --font-bold: 'Avant Garde Demi BT';
+    --font-normal: 'Avant Garde Book BT';
+    --color-green: #44bf1f;
+    --bg-orange-dark: #ff9d6c;
+    --border-color: #e0e0e1;
+    --color-light-gray: #c8beb3;
+    --color-danger: #e85656;
+    --color-warning: #ffbe43;
+    --color-faintblack: #646464;
+    --bg-gray: #efefef;
+    --bg-darkgray: #f5f5f5;
+    --color-faint-orange: #ff975f;
+    --color-faint-gray: #c8beb3;
+    --color-black: #262627;
+    --text-secondary: #202225;
+    --label-color-light: #7a8081;
+  }
+
+#loader {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .loader {
+    border: 0.7vw solid transparent;
+    border-radius: 50%;
+    border-top-color: var(--main-color);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+  .loader1 {
+    width: 2.5vw;
+    height: 2.5vw;
+    animation: spin 0.4s linear infinite;
+  }
+  .loader2 {
+    width: 5vw;
+    height: 5vw;
+    animation: spin 0.8s linear infinite;
+  }
+  .loader3 {
+    width: 7.5vw;
+    height: 7.5vw;
+    animation: spin 1.2s linear infinite;
+  }
+  .loader4 {
+    width: 10vw;
+    height: 10vw;
+    animation: spin 1.6s linear infinite;
+  }
+  .loader5 {
+    width: 12.5vw;
+    height: 12.5vw;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }

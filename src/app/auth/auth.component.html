@@ -1,0 +1,116 @@
+<div class="wrapper">
+  <header>
+    <div class="navbar navbar-default navbar-static-top py-2">
+      <div class="container-fluid d-flex py-2">
+        <div class="navbar-header col-xl-3 col-sm-3">
+          <a class="navbar-brand mt-0"><img src="../../assets/images/logo.svg" alt="logo" /></a>
+          <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="navbar-collapse">
+
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="col-xl-9 d-lg-flex col-sm-9 pr-sm-0 d-sm-none">
+          <div class="col-xl-8 col-sm-7">
+            <ul class="nav navbar-nav flex-lg-row">
+              <li class="mx-xl-4 font-normal mx-sm-2 cursor-pointer">
+                <button class="btn btn-info m2" type="button" (click)="apiCall()">API</button>
+              </li>
+              <li class="mx-xl-4 font-normal mx-sm-2 cursor-pointer">
+                <a>PRODUCT</a>
+              </li>
+              <li class="mx-xl-4 font-normal mx-sm-2 cursor-pointer">
+                <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >Dashboard</a>
+              </li>
+              <li class="mx-xl-4 font-normal mx-sm-2 cursor-pointer">
+                <a>CONTACT</a>
+              </li>
+              <li class="mx-xl-4 font-normal mx-sm-2 cursor-pointer">
+                <a>BLOG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-sm-5 px-sm-0">
+            <ul class="nav navbar-nav flex-lg-row">
+              <li class="
+                    mx-1
+                    header-login
+                    bg-main
+                    border-0
+                    cursor-pointer
+                    d-flex
+                    align-items-center
+                  ">
+                <a routerLink="/login" class="text-white">Login</a>
+              </li>
+              <li class="mx-xl-1 header-login mx-sm-2 cursor-pointer">
+                <a>Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content my-3">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="card bg-white w-75 mx-auto d-flex flex-row">
+        <div class="col-xl-6 col-sm-12 mx-auto">
+          <div class="p-5">
+            <div class="login-title">
+              <h4 class="m-0 font-bold text-center">Sign In</h4>
+            </div>
+            <div class="login-form">
+              <div class="form-carry">
+                <div class="single-row my-4 position-relative">
+                  <input type="email" class="form-control py-4 form" placeholder="Enter Email or Phone number"
+                    id="email" formControlName="email" name="email" required email />
+                  <img *ngIf="loginForm.controls.email.touched && loginForm.controls.email.valid" src="../../assets/images/success-tick.svg"
+                    class="form-icon-staus invalid-feedback d-inline-block" />
+                  <div>
+                    <div *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid" class="invalid-feedback d-block error-msg">
+                      Email ID is required
+                    </div>
+                  </div>
+                </div>
+                <div class="single-row my-4 position-relative">
+                  <input type="password" class="form-control py-4 form" id="password" formControlName="password"
+                    name="password" placeholder="Enter password" required="true" minlength="8" />
+                  <img *ngIf="loginForm.controls.password.touched && loginForm.controls.password.valid" src="../../assets/images/success-tick.svg" class="form-icon-staus invalid-feedback d-block" />
+                  <div>
+                    <div *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid" class="invalid-feedback d-block error-msg">
+                      Password is required
+                    </div>
+                  </div>
+                </div>
+                <div class="
+                      single-row
+                      my-2
+                      position-relative
+                      d-flex
+                      justify-content-between
+                    ">
+                  <div class="checkRemember">
+                    <input type="checkbox" id="rememberMe" />
+                    <label for="rememberMe" class="fs-18">Remember Me</label>
+                  </div>
+
+                  <a class="color-orange fs-20 cursor-pointer" routerLink="/dashboard/reset">Forgot Password?</a>
+                </div>
+                <div class="h-blank"></div>
+                <div class="single-row mt-5">
+                  <button class="login-btn btn btn-info bg-main text-white" type="submit">
+                    Sign In
+                  </button>
+                </div>
+                <div>
+                  <span class="invalid-feedback d-block text-center">The email or password is incorrect.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

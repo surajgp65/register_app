@@ -1,0 +1,152 @@
+body {
+    background: #f9f9f9;
+  }
+  
+  .dropdown-menu {
+    min-width: 0rem !important;
+  }
+  
+  .notification-dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: #ff2b2b;
+    box-shadow: 0px 8px 8px #ff53534d;
+    right: 0rem;
+    top: 0rem;
+  }
+  
+  .active-dot {
+    height: 0.5rem;
+    width: 0.5rem;
+  
+    right: 0rem;
+  
+    bottom: 0rem;
+  }
+  
+  .active-user-dot {
+    height: 0.6rem;
+    width: 0.6rem;
+    background-color: #61c427;
+  
+    right: 3rem;
+    border: 2px solid #fff;
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #ee9c6a;
+    color: #fff;
+  }
+  
+  image:hover {
+    fill: #ee9c6a;
+  }
+  
+  .user-profile-image {
+    border: 2px solid;
+  }
+  
+  .dropdown-item:active {
+    background-color: #ee9c6a;
+  }
+  
+  .leftside-menu {
+    width: 11rem;
+    z-index: 10;
+    // transition: width 0.8s;
+    bottom: 0;
+    top: 0;
+  }
+  
+  .content-page {
+    padding-left: 11.5rem;
+    transition: padding 0.8s;
+  }
+  
+  .sidebar-sticky .dashboard-active-span.active {
+    background: #fefaf7;
+    border-left: 0.3rem solid #ee9c6a;
+    color: #ee9c6a !important;
+    font-weight: 600;
+    font-family: 'Avant Garde Demi BT';
+    transition: 0.3s all;
+  }
+  
+  .sidebar-sticky .dropdown-toggle .dashboard-submenu.active,
+  .sidebar-sticky .collapse .dashboard-submenu.active {
+    background: #fefaf7;
+    border-left: 0.2rem solid #ee9c6a;
+    padding-left: 0.5rem;
+    color: #ee9c6a !important;
+    font-weight: 600;
+    font-family: 'Avant Garde Demi BT';
+    transition: 0.3s all;
+  }
+  
+  .dashboard-active-span.py-3.cursor-pointer:hover {
+    background: #f7d4ba;
+  }
+  
+  .create-new-project {
+    border: 1px dashed #e0e0e1;
+  }
+  
+  #actionItemsSubmenu.show,
+  #projectsSubmenu.show,
+  #profilesSubmenu.show {
+    border-top: 2px solid #d3cfcf;
+  }
+  
+  .leftside-menu.sidebar-collapsed {
+    width: 3.4rem;
+  }
+  .leftside-menu.sidebar-collapsed .dashboard-label {
+    display: none;
+  }
+  .content-page.sidebar-collapsed {
+    margin-left: 3.5rem;
+    padding-left: 0rem;
+  }
+  
+  .notification-container::before {
+    content: '';
+    border: 0.5rem solid transparent;
+    border-bottom-color: #ffffff;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -0.9rem;
+    right: 0.5rem;
+  }
+  
+  .links-text {
+    align-items: center;
+    overflow: hidden;
+    width: 9rem;
+  }
+  
+  .ringnotific-dot {
+    height: 0.3rem;
+    width: 0.3rem;
+    background-color: #ff2b2b;
+    left: 1rem;
+  }
+  .notifc-border {
+    border-bottom: 1px solid #f9f9f9;
+    opacity: 1;
+  }
+  .containe-scroll {
+    height: calc(30vh - 0rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .add-client-supplier {
+    border: 1px dashed #e0e0e1;
+  }
+  .create-project {
+    overflow-y: scroll;
+    max-height: 10rem;
+  }
+  
