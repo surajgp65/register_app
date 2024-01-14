@@ -4,10 +4,9 @@
 
 export const environment = {
   production: false,
-   DEV : {
-    BASE_URL: 'http://52.53.201.100:8000/api/v1',
-    TEST_URL: 'http://52.53.201.100:8000',
-  }
+  DEV: {
+    baseURL: 'http://localhost:3000/',
+  },
 };
 
 /*

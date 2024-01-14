@@ -9,30 +9,30 @@ import { AuthGuard } from './auth/auth.guard';
 import { PageNotFoundComponent } from './common-components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/dashboard/home/home.component';
 
-
 const routes: Routes = [
   // blank redirection
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // blank router redirected to dashboard
-  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },  // auth redirect..
 
   {
-    path: '', component: HomeComponent,
-    canActivate: [AuthGuard],
+    path: '',
+    component: HomeComponent,
     children: [
-      { path: 'dashboard', loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuard], },  // dashboard redirect..
-
-    ]
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./components/dashboard/dashboard.module').then(
+            (m) => m.DashboardModule
+          ),
+      }, // dashboard redirect..
+    ],
   },
 
-
-
   // Wildcard route if url doesnt match with routes..
-  { path: '**', component: PageNotFoundComponent }
-
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

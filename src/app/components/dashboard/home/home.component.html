@@ -1,16 +1,13 @@
-<div class="bg-light">
-  <app-left-menu></app-left-menu>
-  
-    <div class="content-page" id="routeContent">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <app-header></app-header>
-
-            <router-outlet></router-outlet>
-            <!-- <h1 style="text-align: center;">Hello world </h1> -->
-          </div>
+<div class="">
+  <app-header></app-header>
+  <div class="content-page" id="routeContent">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
   </div>
+  <app-footer></app-footer>
+</div>
