@@ -2,7 +2,12 @@
   <h1>User Profile</h1>
   <div class="row">
     <div class="col-md-4 text-center">
-      <img [src]="profileData.image" class="profile_img" alt="" srcset="" />
+      <img
+        [src]="profileData.image ? profileData.image : 'assets/images/user.svg'"
+        class="profile_img"
+        alt=""
+        srcset=""
+      />
       <div class="my-3">
         <button class="btn __btn mx-2" (click)="fileClick()">Edit Image</button>
         <button class="btn __btn mx-2" (click)="openRegisterPop()">
@@ -51,7 +56,7 @@
       <div class="row">
         <div class="col-md-4 text-center">
           <img
-            [src]="profileData.image"
+            [src]="imageFile"
             class="profile_img"
             (click)="fileClick()"
             alt=""
@@ -90,7 +95,7 @@
                     profileForm.get('first_name').touched)
                 "
               >
-                Please enter string only
+                Please enter first name
               </div>
             </div>
             <div class="col-6">
@@ -100,6 +105,16 @@
                 formControlName="last_name"
                 placeholder="Enter last name"
               />
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('last_name').invalid &&
+                  (profileForm.get('last_name').dirty ||
+                    profileForm.get('last_name').touched)
+                "
+              >
+                Please enter last name
+              </div>
             </div>
           </div>
           <div class="row mt-3">
@@ -110,6 +125,16 @@
                 class="form-control"
                 formControlName="email"
               />
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('email').invalid &&
+                  (profileForm.get('email').dirty ||
+                    profileForm.get('email').touched)
+                "
+              >
+                Please enter valid email
+              </div>
             </div>
           </div>
           <div class="row mt-3">
@@ -117,9 +142,20 @@
               <input
                 type="text"
                 placeholder="Enter Phone"
+                maxlength="10"
                 class="form-control"
                 formControlName="phone"
               />
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('phone').invalid &&
+                  (profileForm.get('phone').dirty ||
+                    profileForm.get('phone').touched)
+                "
+              >
+                Please enter valid phone number
+              </div>
             </div>
           </div>
           <div class="row mt-3">
@@ -152,6 +188,16 @@
                   <option>Karnataka</option>
                 </select>
               </div>
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('state').invalid &&
+                  (profileForm.get('state').dirty ||
+                    profileForm.get('state').touched)
+                "
+              >
+                Please select state
+              </div>
             </div>
             <div class="col-12 mb-2">
               <div class="form-group">
@@ -167,6 +213,16 @@
                   <option>Pakistan</option>
                   <option>Malaysia</option>
                 </select>
+                <div
+                  class="text-danger"
+                  *ngIf="
+                    profileForm.get('country').invalid &&
+                    (profileForm.get('country').dirty ||
+                      profileForm.get('country').touched)
+                  "
+                >
+                  Please select country
+                </div>
               </div>
             </div>
             <div class="col-12 mb-2">
@@ -178,6 +234,16 @@
                 <option>Home</option>
                 <option>Company</option>
               </select>
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('address').invalid &&
+                  (profileForm.get('address').dirty ||
+                    profileForm.get('address').touched)
+                "
+              >
+                Please select address
+              </div>
             </div>
 
             <div
@@ -190,12 +256,32 @@
                 class="form-control my-2"
                 formControlName="address1"
               />
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('address1').invalid &&
+                  (profileForm.get('address1').dirty ||
+                    profileForm.get('address1').touched)
+                "
+              >
+                Please select address line 1
+              </div>
               <input
                 type="text"
                 placeholder="Enter address 2"
                 class="form-control my-2"
                 formControlName="address2"
               />
+              <div
+                class="text-danger"
+                *ngIf="
+                  profileForm.get('address2').invalid &&
+                  (profileForm.get('address2').dirty ||
+                    profileForm.get('address2').touched)
+                "
+              >
+                Please select address line 2
+              </div>
             </div>
             <div
               class="col-12"

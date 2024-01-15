@@ -22,20 +22,26 @@ export class ProfileComponent implements OnInit {
       Validators.maxLength(20),
       Validators.pattern(/^[a-zA-Z]*$/),
     ]),
-    last_name: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    age: new FormControl(''),
-    state: new FormControl('Maharashtra'),
-    country: new FormControl('India'),
-    address: new FormControl(''),
+    last_name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.minLength(10),
+      Validators.maxLength(10),
+      Validators.pattern(/^[0-9+\s]+$/),
+    ]),
+    age: new FormControl('', [Validators.required]),
+    state: new FormControl('Maharashtra', [Validators.required]),
+    country: new FormControl('India', [Validators.required]),
+    address: new FormControl('', [Validators.required]),
     address1: new FormControl(''),
     address2: new FormControl(''),
     ComAddress1: new FormControl(''),
     ComAddress2: new FormControl(''),
-    tags: new FormControl([]),
+    tags: new FormControl([], [Validators.required]),
     image: new FormControl(''),
   });
+
   imageUrl: any;
   imageFile: any;
   visible = true;
